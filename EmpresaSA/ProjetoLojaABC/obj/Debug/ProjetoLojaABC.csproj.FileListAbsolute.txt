@@ -1,0 +1,12 @@
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\bin\Debug\ProjetoLojaABC.exe.config
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\bin\Debug\ProjetoLojaABC.exe
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\bin\Debug\ProjetoLojaABC.pdb
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.AssemblyReference.cache
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.Properties.Resources.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.GenerateResource.cache
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.CoreCompileInputs.cache
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.exe
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.pdb
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmSplash.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmLogin.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmMenuPrincipal.resources
