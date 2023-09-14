@@ -1,4 +1,8 @@
-﻿using System;
+﻿// biblioteca de linha
+/* biblioteca
+ * 
+ * de linha*/
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,11 +21,7 @@ namespace ProjetoLojaABC
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+       
         private void btnSair_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -30,8 +30,19 @@ namespace ProjetoLojaABC
         private void btnEntrar_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal abrir = new frmMenuPrincipal();
-            abrir.Show();
-            this.Hide();
+           // abrir.Show();
+           // this.Hide();
+
+
+            // declaração das variáveis
+          string usuario, senha;
+
+            // inicializar as variáveis
+            usuario = txtUsuario.Text;
+
+            senha = txtSenha.Text;
+
+          
         }
     }
 }
