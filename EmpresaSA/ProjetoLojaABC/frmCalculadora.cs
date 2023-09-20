@@ -54,7 +54,6 @@ namespace ProjetoLojaABC
             }
 
 
-
             lblValorResultado.Text = resultado.ToString();
             limparCamposCalcular();
         }
