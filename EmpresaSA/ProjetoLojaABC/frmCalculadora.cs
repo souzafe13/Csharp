@@ -21,50 +21,63 @@ namespace ProjetoLojaABC
         {
             double num1, num2, resultado = 0.0;
 
-            num1 = Convert.ToDouble(txtV1.Text);
-            num2 = Convert.ToDouble(txtV2.Text);
+            try{
+                num1 = Convert.ToDouble(txtV1.Text);
+                num2 = Convert.ToDouble(txtV2.Text);
 
-            if (rdbAdicao.Checked || rdbSubtracao.Checked || rdbMultiplicacao.Checked || rdbDivisao.Checked)
-            {
-
-            
-            if (rdbAdicao.Checked)
-            {
-                resultado = num1 + num2;
-            }
-            if (rdbSubtracao.Checked)
-            {
-                resultado = num1 - num2;
-            }
-            if (rdbMultiplicacao.Checked)
-            {
-                resultado = num1 * num2;
-            }
-            if (rdbDivisao.Checked)
-            {
-                if (num2 == 0)
+                if (rdbAdicao.Checked || rdbSubtracao.Checked || rdbMultiplicacao.Checked || rdbDivisao.Checked)
                 {
-                    MessageBox.Show("Impossível dividir por zero!!!", "Mensagem do sistema",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error,
-                MessageBoxDefaultButton.Button1);
+
+
+                    if (rdbAdicao.Checked)
+                    {
+                        resultado = num1 + num2;
+                    }
+                    if (rdbSubtracao.Checked)
+                    {
+                        resultado = num1 - num2;
+                    }
+                    if (rdbMultiplicacao.Checked)
+                    {
+                        resultado = num1 * num2;
+                    }
+                    if (rdbDivisao.Checked)
+                    {
+                        if (num2 == 0)
+                        {
+                            MessageBox.Show("Impossível dividir por zero!!!", "Mensagem do sistema",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error,
+                        MessageBoxDefaultButton.Button1);
+
+                        }
+                        resultado = num1 / num2;
+                    }
+
+
+                    lblValorResultado.Text = resultado.ToString();
+                    limparCamposCalcular();
+                }
+                else
+                {
+                    MessageBox.Show("Escolha uma operação (+, -, *, /)", "Mensagem do sistema",
+                       MessageBoxButtons.OK,
+                       MessageBoxIcon.Error,
+                       MessageBoxDefaultButton.Button1);
 
                 }
-                resultado = num1 / num2;
             }
+            catch (Exception)
+            {
+                MessageBox.Show("Por gentileza, inserir somente números!", "Mensagem do sistema",
+                     MessageBoxButtons.OK,
+                     MessageBoxIcon.Error,
+                     MessageBoxDefaultButton.Button1);
+
+                limparCampos();
+             }
 
 
-            lblValorResultado.Text = resultado.ToString();
-            limparCamposCalcular();
-        }
-        else
-        {
-                MessageBox.Show("Escolha uma operação", "Mensagem do sistema",
-                   MessageBoxButtons.OK,
-                   MessageBoxIcon.Error,
-                   MessageBoxDefaultButton.Button1);
-
-            }
         }
 
         // criando método para limpar conteúdo
@@ -99,12 +112,25 @@ namespace ProjetoLojaABC
         {
             // Declarando variável para recebr valor do botão pressionado
 
+           
+
             DialogResult resp = MessageBox.Show("Deseja sair?", "Mensagem do sistema",
                 MessageBoxButtons.YesNoCancel,
                 MessageBoxIcon.Information,
                 MessageBoxDefaultButton.Button3);
 
-            Application.Exit();
+            if (resp == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            if (resp == DialogResult.No)
+            {
+                limparCampos();
+            }
+            if (resp == DialogResult.Cancel)
+            {
+                limparCampos();
+            }
         }
 
         private void btnLimpar_Click(object sender, EventArgs e)
