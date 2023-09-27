@@ -52,6 +52,7 @@ namespace ProjetoLojaABC
             this.pgbCarregando.Name = "pgbCarregando";
             this.pgbCarregando.Size = new System.Drawing.Size(311, 23);
             this.pgbCarregando.TabIndex = 1;
+            this.pgbCarregando.Click += new System.EventHandler(this.pgbCarregando_Click);
             // 
             // lblCarregando
             // 
@@ -77,6 +78,7 @@ namespace ProjetoLojaABC
             this.Name = "frmSplash";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loja - Splash";
+            this.Load += new System.EventHandler(this.frmSplash_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbSplash)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

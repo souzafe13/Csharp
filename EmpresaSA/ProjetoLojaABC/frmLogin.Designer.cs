@@ -68,7 +68,7 @@ namespace ProjetoLojaABC
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 26);
             this.txtUsuario.TabIndex = 0;
-            
+            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged_1);
             // 
             // lblSenha
             // 
@@ -90,7 +90,6 @@ namespace ProjetoLojaABC
             this.btnSair.Text = "Sai&r";
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
-           
             // 
             // txtSenha
             // 
@@ -101,7 +100,6 @@ namespace ProjetoLojaABC
             this.txtSenha.PasswordChar = 'l';
             this.txtSenha.Size = new System.Drawing.Size(200, 25);
             this.txtSenha.TabIndex = 1;
-           
             // 
             // btnEntrar
             // 
@@ -132,6 +130,7 @@ namespace ProjetoLojaABC
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Loja ABC Login";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pcbLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
