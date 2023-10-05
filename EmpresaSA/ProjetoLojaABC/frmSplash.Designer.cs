@@ -52,7 +52,7 @@ namespace ProjetoLojaABC
             this.pgbCarregando.Name = "pgbCarregando";
             this.pgbCarregando.Size = new System.Drawing.Size(311, 23);
             this.pgbCarregando.TabIndex = 1;
-            this.pgbCarregando.Click += new System.EventHandler(this.pgbCarregando_Click);
+         
             // 
             // lblCarregando
             // 

@@ -68,7 +68,7 @@ namespace ProjetoLojaABC
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(200, 26);
             this.txtUsuario.TabIndex = 0;
-            this.txtUsuario.TextChanged += new System.EventHandler(this.txtUsuario_TextChanged_1);
+            
             // 
             // lblSenha
             // 
@@ -100,6 +100,7 @@ namespace ProjetoLojaABC
             this.txtSenha.PasswordChar = 'l';
             this.txtSenha.Size = new System.Drawing.Size(200, 25);
             this.txtSenha.TabIndex = 1;
+           
             // 
             // btnEntrar
             // 

@@ -71,10 +71,7 @@ namespace ProjetoLojaABC
 
         }
 
-        private void txtUsuario_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
         {
@@ -92,15 +89,7 @@ namespace ProjetoLojaABC
             }
         }
 
-        private void btnSair_KeyDown(object sender, KeyEventArgs e)
-        {
-            
-        }
-
-        private void txtUsuario_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
+      
 
         private void frmLogin_Load(object sender, EventArgs e)
         {
@@ -108,5 +97,7 @@ namespace ProjetoLojaABC
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+
+        
     }
 }
