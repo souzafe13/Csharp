@@ -98,7 +98,7 @@ namespace ProjetoLojaABC
             this.gpbFuncionario.TabIndex = 0;
             this.gpbFuncionario.TabStop = false;
             this.gpbFuncionario.Text = "Dados";
-            this.gpbFuncionario.Enter += new System.EventHandler(this.gpbFuncionario_Enter);
+            
             // 
             // btnConectar
             // 
@@ -108,6 +108,7 @@ namespace ProjetoLojaABC
             this.btnConectar.TabIndex = 20;
             this.btnConectar.Text = "Conectar";
             this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
             // 
             // txtBairro
             // 
@@ -116,6 +117,7 @@ namespace ProjetoLojaABC
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(85, 24);
             this.txtBairro.TabIndex = 9;
+            this.txtBairro.TextChanged += new System.EventHandler(this.txtBairro_TextChanged);
             // 
             // lblBairro
             // 
@@ -125,6 +127,7 @@ namespace ProjetoLojaABC
             this.lblBairro.Size = new System.Drawing.Size(54, 18);
             this.lblBairro.TabIndex = 19;
             this.lblBairro.Text = "Bairro";
+            this.lblBairro.Click += new System.EventHandler(this.lblBairro_Click);
             // 
             // lblEstado
             // 
@@ -134,7 +137,7 @@ namespace ProjetoLojaABC
             this.lblEstado.Size = new System.Drawing.Size(61, 18);
             this.lblEstado.TabIndex = 18;
             this.lblEstado.Text = "Estado";
-            this.lblEstado.Click += new System.EventHandler(this.label1_Click_2);
+           
             // 
             // cbbEstado
             // 
@@ -161,6 +164,7 @@ namespace ProjetoLojaABC
             this.cbbEstado.Name = "cbbEstado";
             this.cbbEstado.Size = new System.Drawing.Size(41, 26);
             this.cbbEstado.TabIndex = 11;
+            this.cbbEstado.SelectedIndexChanged += new System.EventHandler(this.cbbEstado_SelectedIndexChanged);
             // 
             // txtCidade
             // 
@@ -169,6 +173,7 @@ namespace ProjetoLojaABC
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(88, 24);
             this.txtCidade.TabIndex = 10;
+            this.txtCidade.TextChanged += new System.EventHandler(this.txtCidade_TextChanged);
             // 
             // lblCidade
             // 
@@ -178,6 +183,7 @@ namespace ProjetoLojaABC
             this.lblCidade.Size = new System.Drawing.Size(60, 18);
             this.lblCidade.TabIndex = 15;
             this.lblCidade.Text = "Cidade";
+            this.lblCidade.Click += new System.EventHandler(this.lblCidade_Click);
             // 
             // txtNumero
             // 
@@ -186,6 +192,7 @@ namespace ProjetoLojaABC
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(84, 24);
             this.txtNumero.TabIndex = 8;
+            this.txtNumero.TextChanged += new System.EventHandler(this.txtNumero_TextChanged);
             // 
             // lblNumero
             // 
@@ -195,6 +202,7 @@ namespace ProjetoLojaABC
             this.lblNumero.Size = new System.Drawing.Size(68, 18);
             this.lblNumero.TabIndex = 14;
             this.lblNumero.Text = "Número";
+            this.lblNumero.Click += new System.EventHandler(this.lblNumero_Click);
             // 
             // lblCEP
             // 
@@ -204,6 +212,7 @@ namespace ProjetoLojaABC
             this.lblCEP.Size = new System.Drawing.Size(42, 18);
             this.lblCEP.TabIndex = 13;
             this.lblCEP.Text = "CEP";
+            this.lblCEP.Click += new System.EventHandler(this.lblCEP_Click);
             // 
             // mskCEP
             // 
@@ -212,6 +221,7 @@ namespace ProjetoLojaABC
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(88, 24);
             this.mskCEP.TabIndex = 7;
+            this.mskCEP.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCEP_MaskInputRejected);
             this.mskCEP.KeyDown += new System.Windows.Forms.KeyEventHandler(this.mskCEP_KeyDown);
             // 
             // txtEndereco
@@ -221,6 +231,7 @@ namespace ProjetoLojaABC
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(370, 24);
             this.txtEndereco.TabIndex = 6;
+            this.txtEndereco.TextChanged += new System.EventHandler(this.txtEndereco_TextChanged);
             // 
             // lblEndereco
             // 
@@ -230,7 +241,7 @@ namespace ProjetoLojaABC
             this.lblEndereco.Size = new System.Drawing.Size(80, 18);
             this.lblEndereco.TabIndex = 10;
             this.lblEndereco.Text = "Endereço";
-            this.lblEndereco.Click += new System.EventHandler(this.label1_Click_1);
+            
             // 
             // txtEmail
             // 
@@ -239,6 +250,7 @@ namespace ProjetoLojaABC
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(459, 24);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.TextChanged += new System.EventHandler(this.txtEmail_TextChanged);
             // 
             // lblEmail
             // 
@@ -248,7 +260,7 @@ namespace ProjetoLojaABC
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 8;
             this.lblEmail.Text = "E-mail";
-            this.lblEmail.Click += new System.EventHandler(this.label1_Click);
+           
             // 
             // dtpNascimento
             // 
@@ -257,7 +269,7 @@ namespace ProjetoLojaABC
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(130, 24);
             this.dtpNascimento.TabIndex = 3;
-            this.dtpNascimento.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            
             // 
             // lblNascimento
             // 
@@ -267,6 +279,7 @@ namespace ProjetoLojaABC
             this.lblNascimento.Size = new System.Drawing.Size(161, 18);
             this.lblNascimento.TabIndex = 6;
             this.lblNascimento.Text = "Data de Nascimento";
+            this.lblNascimento.Click += new System.EventHandler(this.lblNascimento_Click);
             // 
             // mskCPF
             // 
@@ -275,6 +288,7 @@ namespace ProjetoLojaABC
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(127, 24);
             this.mskCPF.TabIndex = 4;
+            this.mskCPF.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.mskCPF_MaskInputRejected);
             // 
             // lblCPF
             // 
@@ -284,6 +298,7 @@ namespace ProjetoLojaABC
             this.lblCPF.Size = new System.Drawing.Size(41, 18);
             this.lblCPF.TabIndex = 4;
             this.lblCPF.Text = "CPF";
+            this.lblCPF.Click += new System.EventHandler(this.lblCPF_Click);
             // 
             // txtNome
             // 
@@ -292,6 +307,7 @@ namespace ProjetoLojaABC
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(459, 24);
             this.txtNome.TabIndex = 2;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // lblNome
             // 
@@ -301,6 +317,7 @@ namespace ProjetoLojaABC
             this.lblNome.Size = new System.Drawing.Size(53, 18);
             this.lblNome.TabIndex = 2;
             this.lblNome.Text = "Nome";
+            this.lblNome.Click += new System.EventHandler(this.lblNome_Click);
             // 
             // txtCodigo
             // 
@@ -309,6 +326,7 @@ namespace ProjetoLojaABC
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 24);
             this.txtCodigo.TabIndex = 1;
+            this.txtCodigo.TextChanged += new System.EventHandler(this.txtCodigo_TextChanged);
             // 
             // lblCodigo
             // 
@@ -318,6 +336,7 @@ namespace ProjetoLojaABC
             this.lblCodigo.Size = new System.Drawing.Size(62, 18);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
+            this.lblCodigo.Click += new System.EventHandler(this.lblCodigo_Click);
             // 
             // pnlCrud
             // 
@@ -334,6 +353,7 @@ namespace ProjetoLojaABC
             this.pnlCrud.Name = "pnlCrud";
             this.pnlCrud.Size = new System.Drawing.Size(756, 59);
             this.pnlCrud.TabIndex = 12;
+            this.pnlCrud.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlCrud_Paint);
             // 
             // btnVoltar
             // 

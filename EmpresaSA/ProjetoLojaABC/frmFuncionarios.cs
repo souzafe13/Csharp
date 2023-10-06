@@ -42,30 +42,7 @@ namespace ProjetoLojaABC
             carregaFuncionario(nome);
         }
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gpbFuncionario_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click_2(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void frmFuncionarios_Load(object sender, EventArgs e)
         {
@@ -421,6 +398,104 @@ namespace ProjetoLojaABC
             }
         }
 
-        
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtBairro_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblBairro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cbbEstado_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCidade_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCidade_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNumero_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNumero_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCEP_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskCEP_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void txtEndereco_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNascimento_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mskCPF_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void lblCPF_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblNome_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtCodigo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblCodigo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlCrud_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

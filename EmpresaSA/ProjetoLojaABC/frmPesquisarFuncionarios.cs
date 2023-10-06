@@ -117,7 +117,7 @@ namespace ProjetoLojaABC
             Conexao.fecharConexao();
         }
 
-        //pesquisar por nome****************************************************************************************************
+        //pesquisar por nome ****************************************************************************************************
 
         public void pesquisarNome(string nome)
         {
