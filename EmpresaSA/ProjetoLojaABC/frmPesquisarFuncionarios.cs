@@ -46,8 +46,6 @@ namespace ProjetoLojaABC
             txtDescricao.Enabled = true;
             txtDescricao.Focus();
 
-
-
         }
 
         //limpar campos
@@ -92,7 +90,7 @@ namespace ProjetoLojaABC
             }
         }
 
-        //pesquisar por código
+        //pesquisar por código ********************************************************************************
         public void pesquisaCodigo(int codigo)
         {
             MySqlCommand comm = new MySqlCommand();
@@ -104,7 +102,7 @@ namespace ProjetoLojaABC
 
             comm.Connection = Conexao.obterConexao();
 
-            //carregando dados para objeto de tabela
+            //carregando dados para objeto de tabela*****************************************************************************
 
             MySqlDataReader DR;
 
@@ -119,7 +117,7 @@ namespace ProjetoLojaABC
             Conexao.fecharConexao();
         }
 
-        //pesquisar por nome
+        //pesquisar por nome****************************************************************************************************
 
         public void pesquisarNome(string nome)
         {
@@ -144,9 +142,6 @@ namespace ProjetoLojaABC
             Conexao.fecharConexao();
 
         }
-
-
-     
 
 
         private void ltbPesquisar_SelectedIndexChanged(object sender, EventArgs e)

@@ -14,7 +14,8 @@ namespace ProjetoLojaABC
 {
     public partial class frmFuncionarios : Form
     {
-        //Criando variáveis para controle do menu
+        //Criando variáveis para controle do menu *****************************************************************************
+
         const int MF_BYCOMMAND = 0X400;
         [DllImport("user32")]
         static extern int RemoveMenu(IntPtr hMenu, int nPosition, int wFlags);
@@ -34,8 +35,11 @@ namespace ProjetoLojaABC
             InitializeComponent();
             desabilitarCampos();
             txtNome.Text = nome;
-            // habilitar os campos
+            
+            // habilitar os campos ******************************************************************************************
+
             habilitarCamposAlterar();
+            carregaFuncionario(nome);
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
@@ -81,7 +85,7 @@ namespace ProjetoLojaABC
         {
             LimparCampos();
         }
-        // criando método de limpar campos
+        // criando método de limpar campos **********************************************************************
 
         public void LimparCampos()
         {
@@ -99,7 +103,7 @@ namespace ProjetoLojaABC
             txtNome.Focus();
 
         }
-        // desabilitar campos
+        // desabilitar campos *************************************************************************************
 
         public void desabilitarCampos()
         {
@@ -120,10 +124,7 @@ namespace ProjetoLojaABC
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = false;
 
-
-
-
-        }  // desabilitar campos novo (botão cadastrar)
+        }  // desabilitar campos novo (botão cadastrar) ***************************************************************
 
         public void desabilitarCamposNovo()
         {
@@ -145,11 +146,9 @@ namespace ProjetoLojaABC
             btnLimpar.Enabled = false;
             btnNovo.Enabled = true;
             btnNovo.Focus();
-
         }
 
-
-        // habilitar campos
+        // habilitar campos ***************************************************************************************
 
         public void habilitarCampos()
         {
@@ -172,7 +171,8 @@ namespace ProjetoLojaABC
             btnNovo.Enabled = false;
 
             txtNome.Focus();
-        }        // habilitar campos alterar
+        }        
+        // habilitar campos alterar *******************************************************************************
 
         public void habilitarCamposAlterar()
         {
@@ -202,7 +202,8 @@ namespace ProjetoLojaABC
             habilitarCampos();
             carregaCodigo();
         }
-        // Cadastrando funcionários no banco de dados
+        // Cadastrando funcionários no banco de dados ***************************************************************************************
+
         public int cadastraFuncionarios()
         {
             MySqlCommand comm = new MySqlCommand();
@@ -231,7 +232,7 @@ namespace ProjetoLojaABC
             return res;
         }
 
-        // carrega código
+        // carrega código *****************************************************************************************************************
 
         public void carregaCodigo()
         {
@@ -248,7 +249,7 @@ namespace ProjetoLojaABC
             Conexao.fecharConexao();
         }
 
-        // carregar funcionários
+        // carregar funcionários **********************************************************************************************************
 
         public void carregaFuncionario(string nome)
         {
@@ -278,10 +279,7 @@ namespace ProjetoLojaABC
             txtCidade.Text = DR.GetString(10);
 
             Conexao.fecharConexao();
-
         }
-
-
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
@@ -303,8 +301,6 @@ namespace ProjetoLojaABC
                 {
                     MessageBox.Show("Erro ao cadastrar!");
                 }
-                
-       
             }
         }
 
@@ -317,9 +313,50 @@ namespace ProjetoLojaABC
 
         private void btnAlterar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Alterado com sucesso!", "Mensagem do sistema", 
-                MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
-            LimparCampos();
+            if (alterarFuncionarios(Convert.ToInt32(txtCodigo.Text)) == 1)
+            {
+                MessageBox.Show("Alterado com sucesso!", "Mensagem do sistema",
+                                MessageBoxButtons.OK, MessageBoxIcon.Information, MessageBoxDefaultButton.Button1);
+                LimparCampos();
+            }
+            else
+            {
+                MessageBox.Show("Erro ao alterar!", "Mensagem do sistema",
+                MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+                
+            }
+            
+        }
+
+        //alterar funcionários **********************************************************************************************************
+        
+        public int alterarFuncionarios(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "update tbFuncionarios set nome = @nome, email = @email, cpf = @cpf, dNasc = @dNasc, endereco = @endereco, cep = @cep, numero = @numero, bairro = @bairro, estado = @estado, cidade = @cidade where codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
+            comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
+            comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
+            comm.Parameters.Add("@dNasc", MySqlDbType.Date).Value = Convert.ToDateTime(dtpNascimento.Text);
+            comm.Parameters.Add("@endereco", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
+            comm.Parameters.Add("@cep", MySqlDbType.VarChar, 9).Value = mskCEP.Text;
+            comm.Parameters.Add("@numero", MySqlDbType.VarChar, 10).Value = txtNumero.Text;
+            comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtEndereco.Text;
+            comm.Parameters.Add("@estado", MySqlDbType.VarChar, 2).Value = cbbEstado.Text;
+            comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codigo;
+
+            comm.Connection = Conexao.obterConexao();
+            int res = comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+
+            return res;
+
         }
 
         private void btnExcluir_Click(object sender, EventArgs e)
@@ -329,6 +366,7 @@ namespace ProjetoLojaABC
 
             if (resp == DialogResult.OK)
             {
+                excluirFuncionarios(Convert.ToInt32(txtCodigo.Text));
                 LimparCampos();
             }
             else
@@ -337,7 +375,23 @@ namespace ProjetoLojaABC
             }
         }
 
-        
+        // excluir funcionários ******************************************************************************************************
+        public void excluirFuncionarios(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "delete from tbFuncionarios where codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codigo;
+
+            comm.Connection = Conexao.obterConexao();
+            comm.ExecuteNonQuery();
+
+            Conexao.fecharConexao();
+
+
+        }
 
         private void mskCEP_KeyDown(object sender, KeyEventArgs e)
         {
@@ -367,6 +421,6 @@ namespace ProjetoLojaABC
             }
         }
 
-       
+        
     }
 }

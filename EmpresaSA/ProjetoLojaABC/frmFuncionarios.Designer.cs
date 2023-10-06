@@ -31,6 +31,7 @@ namespace ProjetoLojaABC
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFuncionarios));
             this.gpbFuncionario = new System.Windows.Forms.GroupBox();
+            this.btnConectar = new System.Windows.Forms.Button();
             this.txtBairro = new System.Windows.Forms.TextBox();
             this.lblBairro = new System.Windows.Forms.Label();
             this.lblEstado = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@ namespace ProjetoLojaABC
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.btnConectar = new System.Windows.Forms.Button();
             this.gpbFuncionario.SuspendLayout();
             this.pnlCrud.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +100,15 @@ namespace ProjetoLojaABC
             this.gpbFuncionario.Text = "Dados";
             this.gpbFuncionario.Enter += new System.EventHandler(this.gpbFuncionario_Enter);
             // 
+            // btnConectar
+            // 
+            this.btnConectar.Location = new System.Drawing.Point(301, 340);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(75, 23);
+            this.btnConectar.TabIndex = 20;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.UseVisualStyleBackColor = true;
+            // 
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(267, 265);
@@ -120,7 +129,7 @@ namespace ProjetoLojaABC
             // lblEstado
             // 
             this.lblEstado.AutoSize = true;
-            this.lblEstado.Location = new System.Drawing.Point(558, 269);
+            this.lblEstado.Location = new System.Drawing.Point(367, 268);
             this.lblEstado.Name = "lblEstado";
             this.lblEstado.Size = new System.Drawing.Size(61, 18);
             this.lblEstado.TabIndex = 18;
@@ -148,23 +157,23 @@ namespace ProjetoLojaABC
             "RS",
             "RN",
             "SC"});
-            this.cbbEstado.Location = new System.Drawing.Point(625, 264);
+            this.cbbEstado.Location = new System.Drawing.Point(446, 264);
             this.cbbEstado.Name = "cbbEstado";
-            this.cbbEstado.Size = new System.Drawing.Size(68, 26);
+            this.cbbEstado.Size = new System.Drawing.Size(41, 26);
             this.cbbEstado.TabIndex = 11;
             // 
             // txtCidade
             // 
-            this.txtCidade.Location = new System.Drawing.Point(424, 265);
+            this.txtCidade.Location = new System.Drawing.Point(571, 266);
             this.txtCidade.MaxLength = 100;
             this.txtCidade.Name = "txtCidade";
-            this.txtCidade.Size = new System.Drawing.Size(109, 24);
+            this.txtCidade.Size = new System.Drawing.Size(88, 24);
             this.txtCidade.TabIndex = 10;
             // 
             // lblCidade
             // 
             this.lblCidade.AutoSize = true;
-            this.lblCidade.Location = new System.Drawing.Point(358, 266);
+            this.lblCidade.Location = new System.Drawing.Point(505, 269);
             this.lblCidade.Name = "lblCidade";
             this.lblCidade.Size = new System.Drawing.Size(60, 18);
             this.lblCidade.TabIndex = 15;
@@ -190,7 +199,7 @@ namespace ProjetoLojaABC
             // lblCEP
             // 
             this.lblCEP.AutoSize = true;
-            this.lblCEP.Location = new System.Drawing.Point(558, 227);
+            this.lblCEP.Location = new System.Drawing.Point(514, 224);
             this.lblCEP.Name = "lblCEP";
             this.lblCEP.Size = new System.Drawing.Size(42, 18);
             this.lblCEP.TabIndex = 13;
@@ -198,7 +207,7 @@ namespace ProjetoLojaABC
             // 
             // mskCEP
             // 
-            this.mskCEP.Location = new System.Drawing.Point(605, 224);
+            this.mskCEP.Location = new System.Drawing.Point(571, 221);
             this.mskCEP.Mask = "00000-000";
             this.mskCEP.Name = "mskCEP";
             this.mskCEP.Size = new System.Drawing.Size(88, 24);
@@ -210,7 +219,7 @@ namespace ProjetoLojaABC
             this.txtEndereco.Location = new System.Drawing.Point(117, 224);
             this.txtEndereco.MaxLength = 100;
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(416, 24);
+            this.txtEndereco.Size = new System.Drawing.Size(370, 24);
             this.txtEndereco.TabIndex = 6;
             // 
             // lblEndereco
@@ -225,16 +234,16 @@ namespace ProjetoLojaABC
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(117, 173);
+            this.txtEmail.Location = new System.Drawing.Point(117, 137);
             this.txtEmail.MaxLength = 100;
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(416, 24);
+            this.txtEmail.Size = new System.Drawing.Size(459, 24);
             this.txtEmail.TabIndex = 5;
             // 
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(31, 179);
+            this.lblEmail.Location = new System.Drawing.Point(31, 137);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(56, 18);
             this.lblEmail.TabIndex = 8;
@@ -244,7 +253,7 @@ namespace ProjetoLojaABC
             // dtpNascimento
             // 
             this.dtpNascimento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpNascimento.Location = new System.Drawing.Point(199, 137);
+            this.dtpNascimento.Location = new System.Drawing.Point(446, 177);
             this.dtpNascimento.Name = "dtpNascimento";
             this.dtpNascimento.Size = new System.Drawing.Size(130, 24);
             this.dtpNascimento.TabIndex = 3;
@@ -253,7 +262,7 @@ namespace ProjetoLojaABC
             // lblNascimento
             // 
             this.lblNascimento.AutoSize = true;
-            this.lblNascimento.Location = new System.Drawing.Point(31, 140);
+            this.lblNascimento.Location = new System.Drawing.Point(279, 180);
             this.lblNascimento.Name = "lblNascimento";
             this.lblNascimento.Size = new System.Drawing.Size(161, 18);
             this.lblNascimento.TabIndex = 6;
@@ -261,7 +270,7 @@ namespace ProjetoLojaABC
             // 
             // mskCPF
             // 
-            this.mskCPF.Location = new System.Drawing.Point(406, 139);
+            this.mskCPF.Location = new System.Drawing.Point(117, 177);
             this.mskCPF.Mask = "999,999,999-99";
             this.mskCPF.Name = "mskCPF";
             this.mskCPF.Size = new System.Drawing.Size(127, 24);
@@ -270,7 +279,7 @@ namespace ProjetoLojaABC
             // lblCPF
             // 
             this.lblCPF.AutoSize = true;
-            this.lblCPF.Location = new System.Drawing.Point(348, 142);
+            this.lblCPF.Location = new System.Drawing.Point(31, 177);
             this.lblCPF.Name = "lblCPF";
             this.lblCPF.Size = new System.Drawing.Size(41, 18);
             this.lblCPF.TabIndex = 4;
@@ -281,7 +290,7 @@ namespace ProjetoLojaABC
             this.txtNome.Location = new System.Drawing.Point(117, 86);
             this.txtNome.MaxLength = 100;
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(416, 24);
+            this.txtNome.Size = new System.Drawing.Size(459, 24);
             this.txtNome.TabIndex = 2;
             // 
             // lblNome
@@ -424,15 +433,6 @@ namespace ProjetoLojaABC
             this.btnNovo.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnNovo.UseVisualStyleBackColor = true;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
-            // 
-            // btnConectar
-            // 
-            this.btnConectar.Location = new System.Drawing.Point(605, 352);
-            this.btnConectar.Name = "btnConectar";
-            this.btnConectar.Size = new System.Drawing.Size(75, 23);
-            this.btnConectar.TabIndex = 20;
-            this.btnConectar.Text = "Conectar";
-            this.btnConectar.UseVisualStyleBackColor = true;
             // 
             // frmFuncionarios
             // 
