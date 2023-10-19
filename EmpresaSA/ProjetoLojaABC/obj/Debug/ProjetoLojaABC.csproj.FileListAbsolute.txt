@@ -37,3 +37,4 @@ C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\Em
 C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.csproj.CopyComplete
 C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmCadastroDeUsuarios.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\EmpresaSA\ProjetoLojaABC\obj\Debug\ProjetoLojaABC.frmPesquisarUsuarios.resources

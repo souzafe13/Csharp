@@ -1,0 +1,13 @@
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\bin\Debug\MariaVaiComAsOutras.exe.config
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\bin\Debug\MariaVaiComAsOutras.exe
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\bin\Debug\MariaVaiComAsOutras.pdb
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.csproj.AssemblyReference.cache
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.frmRoteiros.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.Properties.Resources.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.csproj.GenerateResource.cache
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.csproj.CoreCompileInputs.cache
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.exe
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.pdb
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.frmPacotes.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.frmPassagens.resources
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.frmHotel.resources
