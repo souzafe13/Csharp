@@ -30,8 +30,6 @@ namespace MariaVaiComAsOutras
         private void InitializeComponent()
         {
             this.gpbDestinos = new System.Windows.Forms.GroupBox();
-            this.lblQtDePessoas = new System.Windows.Forms.Label();
-            this.cbbQtPessoas = new System.Windows.Forms.ComboBox();
             this.ltbDestinos = new System.Windows.Forms.ListBox();
             this.lblInstrucao = new System.Windows.Forms.Label();
             this.rdbInternacional = new System.Windows.Forms.RadioButton();
@@ -39,13 +37,17 @@ namespace MariaVaiComAsOutras
             this.lblData = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnPesquisar = new System.Windows.Forms.Button();
+            this.lblDescricao = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
             this.gpbDestinos.SuspendLayout();
             this.SuspendLayout();
             // 
             // gpbDestinos
             // 
-            this.gpbDestinos.Controls.Add(this.lblQtDePessoas);
-            this.gpbDestinos.Controls.Add(this.cbbQtPessoas);
+            this.gpbDestinos.Controls.Add(this.txtDescricao);
+            this.gpbDestinos.Controls.Add(this.lblDescricao);
+            this.gpbDestinos.Controls.Add(this.btnPesquisar);
             this.gpbDestinos.Controls.Add(this.ltbDestinos);
             this.gpbDestinos.Controls.Add(this.lblInstrucao);
             this.gpbDestinos.Controls.Add(this.rdbInternacional);
@@ -59,34 +61,6 @@ namespace MariaVaiComAsOutras
             this.gpbDestinos.TabIndex = 1;
             this.gpbDestinos.TabStop = false;
             this.gpbDestinos.Text = "Destinos";
-            // 
-            // lblQtDePessoas
-            // 
-            this.lblQtDePessoas.AutoSize = true;
-            this.lblQtDePessoas.Location = new System.Drawing.Point(393, 162);
-            this.lblQtDePessoas.Name = "lblQtDePessoas";
-            this.lblQtDePessoas.Size = new System.Drawing.Size(187, 18);
-            this.lblQtDePessoas.TabIndex = 8;
-            this.lblQtDePessoas.Text = "Quantidade de Pessoas";
-            // 
-            // cbbQtPessoas
-            // 
-            this.cbbQtPessoas.FormattingEnabled = true;
-            this.cbbQtPessoas.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10+"});
-            this.cbbQtPessoas.Location = new System.Drawing.Point(590, 162);
-            this.cbbQtPessoas.Name = "cbbQtPessoas";
-            this.cbbQtPessoas.Size = new System.Drawing.Size(70, 26);
-            this.cbbQtPessoas.TabIndex = 7;
             // 
             // ltbDestinos
             // 
@@ -111,7 +85,7 @@ namespace MariaVaiComAsOutras
             // 
             this.rdbInternacional.AutoSize = true;
             this.rdbInternacional.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbInternacional.Location = new System.Drawing.Point(415, 183);
+            this.rdbInternacional.Location = new System.Drawing.Point(325, 69);
             this.rdbInternacional.Name = "rdbInternacional";
             this.rdbInternacional.Size = new System.Drawing.Size(122, 22);
             this.rdbInternacional.TabIndex = 5;
@@ -123,19 +97,20 @@ namespace MariaVaiComAsOutras
             // 
             this.rdbNacional.AutoSize = true;
             this.rdbNacional.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbNacional.Location = new System.Drawing.Point(170, 183);
+            this.rdbNacional.Location = new System.Drawing.Point(135, 70);
             this.rdbNacional.Name = "rdbNacional";
             this.rdbNacional.Size = new System.Drawing.Size(92, 22);
             this.rdbNacional.TabIndex = 4;
             this.rdbNacional.TabStop = true;
             this.rdbNacional.Text = "Nacional";
             this.rdbNacional.UseVisualStyleBackColor = true;
+            this.rdbNacional.CheckedChanged += new System.EventHandler(this.rdbNacional_CheckedChanged);
             // 
             // lblData
             // 
             this.lblData.AutoSize = true;
             this.lblData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblData.Location = new System.Drawing.Point(91, 106);
+            this.lblData.Location = new System.Drawing.Point(81, 173);
             this.lblData.Name = "lblData";
             this.lblData.Size = new System.Drawing.Size(161, 18);
             this.lblData.TabIndex = 2;
@@ -144,7 +119,7 @@ namespace MariaVaiComAsOutras
             // dtpData
             // 
             this.dtpData.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtpData.Location = new System.Drawing.Point(272, 106);
+            this.dtpData.Location = new System.Drawing.Point(275, 167);
             this.dtpData.Name = "dtpData";
             this.dtpData.Size = new System.Drawing.Size(308, 24);
             this.dtpData.TabIndex = 3;
@@ -159,6 +134,32 @@ namespace MariaVaiComAsOutras
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnPesquisar
+            // 
+            this.btnPesquisar.Location = new System.Drawing.Point(577, 69);
+            this.btnPesquisar.Name = "btnPesquisar";
+            this.btnPesquisar.Size = new System.Drawing.Size(119, 23);
+            this.btnPesquisar.TabIndex = 7;
+            this.btnPesquisar.Text = "Pesquisar";
+            this.btnPesquisar.UseVisualStyleBackColor = true;
+            this.btnPesquisar.Click += new System.EventHandler(this.btnPesquisar_Click);
+            // 
+            // lblDescricao
+            // 
+            this.lblDescricao.AutoSize = true;
+            this.lblDescricao.Location = new System.Drawing.Point(157, 123);
+            this.lblDescricao.Name = "lblDescricao";
+            this.lblDescricao.Size = new System.Drawing.Size(85, 18);
+            this.lblDescricao.TabIndex = 8;
+            this.lblDescricao.Text = "Descricao";
+            // 
+            // txtDescricao
+            // 
+            this.txtDescricao.Location = new System.Drawing.Point(335, 117);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(100, 24);
+            this.txtDescricao.TabIndex = 9;
+            // 
             // frmPassagens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -169,6 +170,7 @@ namespace MariaVaiComAsOutras
             this.Name = "frmPassagens";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPassagens";
+            this.Load += new System.EventHandler(this.frmPassagens_Load);
             this.gpbDestinos.ResumeLayout(false);
             this.gpbDestinos.PerformLayout();
             this.ResumeLayout(false);
@@ -184,8 +186,9 @@ namespace MariaVaiComAsOutras
         private System.Windows.Forms.RadioButton rdbNacional;
         private System.Windows.Forms.Label lblData;
         private System.Windows.Forms.DateTimePicker dtpData;
-        private System.Windows.Forms.Label lblQtDePessoas;
-        private System.Windows.Forms.ComboBox cbbQtPessoas;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Button btnPesquisar;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.Label lblDescricao;
     }
 }
