@@ -29,6 +29,7 @@ namespace MariaVaiComAsOutras
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPacotes));
             this.gpbDestinos = new System.Windows.Forms.GroupBox();
             this.ltbDestinos = new System.Windows.Forms.ListBox();
             this.lblInstrucao = new System.Windows.Forms.Label();
@@ -134,9 +135,10 @@ namespace MariaVaiComAsOutras
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.gpbDestinos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPacotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPacotes";
+            this.Text = "Pacotes";
             this.Load += new System.EventHandler(this.frmPacotes_Load);
             this.gpbDestinos.ResumeLayout(false);
             this.gpbDestinos.PerformLayout();

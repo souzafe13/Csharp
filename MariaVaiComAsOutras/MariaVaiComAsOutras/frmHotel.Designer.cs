@@ -29,6 +29,7 @@ namespace MariaVaiComAsOutras
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmHotel));
             this.btnVoltar = new System.Windows.Forms.Button();
             this.gpbDestinos = new System.Windows.Forms.GroupBox();
             this.rdbResort = new System.Windows.Forms.RadioButton();
@@ -208,9 +209,10 @@ namespace MariaVaiComAsOutras
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.gpbDestinos);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmHotel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHotel";
+            this.Text = "Hotel";
             this.gpbDestinos.ResumeLayout(false);
             this.gpbDestinos.PerformLayout();
             this.ResumeLayout(false);

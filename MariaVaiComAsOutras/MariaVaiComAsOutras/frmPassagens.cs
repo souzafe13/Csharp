@@ -25,6 +25,7 @@ namespace MariaVaiComAsOutras
         public frmPassagens()
         {
             InitializeComponent();
+            desabilitarCampos();
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)
@@ -40,10 +41,23 @@ namespace MariaVaiComAsOutras
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+
+        // desabilitar campos
+        public void desabilitarCampos()
+        {
+            btnPesquisar.Enabled = false;
+            btnLimpar.Enabled = false;
+            txtDescricao.Enabled = false;
+            rdbNacional.Checked = false;
+            rdbInternacional.Checked = false;
+        }
         // habilitar campos
         public void habilitarCampos()
         {
-            rdbNacional.Enabled = true;
+          btnPesquisar.Enabled = true;
+          btnLimpar.Enabled = true;
+          txtDescricao.Enabled = true;
+          txtDescricao.Focus();
 
         }
 
@@ -52,13 +66,18 @@ namespace MariaVaiComAsOutras
             habilitarCampos();
         }
 
+        private void rdbInternacional_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarCampos();
+        }
+
         public void pesquisarNacional (string modalidade)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select modalidade from tbPassagens where modalidade like '%" + modalidade + "%';"; ;
+            comm.CommandText = "select modalidade from tbPassagensNacionais where modalidade like '%" + modalidade + "%';"; ;
             comm.CommandType = CommandType.Text;
             comm.Parameters.Clear();
-            comm.Parameters.Add("@modalidade", MySqlDbType.VarChar,15).Value = modalidade;
+            comm.Parameters.Add("modalidade", MySqlDbType.VarChar,15).Value = modalidade;
 
             comm.Connection = Conexao.obterConexao();
 
@@ -68,7 +87,16 @@ namespace MariaVaiComAsOutras
             DR = comm.ExecuteReader();
             DR.Read();
             ltbDestinos.Items.Clear();
-            ltbDestinos.Items.Add(DR.GetString(0));
+            try
+            {
+                ltbDestinos.Items.Add(DR.GetString(0));
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Destino nacional indisponível no momento!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1); 
+            }
+            
 
             Conexao.fecharConexao();
         }
@@ -76,7 +104,7 @@ namespace MariaVaiComAsOutras
         public void pesquisarInternacional(string modalidade)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select modalidade from tbPassagens where modalidade like '%" + modalidade + "%';"; ;
+            comm.CommandText = "select modalidade from tbPassagensInternacionais where modalidade like '%" + modalidade + "%';"; ;
             comm.CommandType = CommandType.Text;
             comm.Parameters.Clear();
             comm.Parameters.Add("@modalidade", MySqlDbType.VarChar, 15).Value = modalidade;
@@ -89,11 +117,21 @@ namespace MariaVaiComAsOutras
             DR = comm.ExecuteReader();
             DR.Read();
             ltbDestinos.Items.Clear();
-            ltbDestinos.Items.Add(DR.GetString(0));
+
+            try
+            {
+                ltbDestinos.Items.Add(DR.GetString(0));
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Destino internacional indisponível no momento!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
+            }
+            
 
             Conexao.fecharConexao();
         }
-            private void btnPesquisar_Click(object sender, EventArgs e)
+        private void btnPesquisar_Click(object sender, EventArgs e)
         {
             if (rdbNacional.Checked)
             {
@@ -102,6 +140,37 @@ namespace MariaVaiComAsOutras
             if (rdbInternacional.Checked)
             {
                 pesquisarInternacional(Convert.ToString(txtDescricao.Text));
+            }
+            if (txtDescricao.Text.Equals(""))
+            {
+                limparCampos();
+                MessageBox.Show("Por favor, escoha um destino!", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);            
+            }
+           
+            // mensagem do sistema quando não encontra/não há um destino
+           
+        }
+        public void limparCampos()
+        {
+            txtDescricao.Clear();
+            rdbNacional.Checked = false;
+            rdbInternacional.Checked = false;
+            txtDescricao.Enabled = false;
+            ltbDestinos.Items.Clear();
+            txtDescricao.Enabled = true;
+
+        }
+        private void btnLimpar_Click(object sender, EventArgs e)
+       
+        {
+            limparCampos();
+        }
+
+        private void ltbDestinos_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ltbDestinos == null)
+            {
+                MessageBox.Show("Por favor, digite um destino", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
     }

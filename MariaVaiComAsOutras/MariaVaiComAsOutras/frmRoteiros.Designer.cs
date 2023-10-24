@@ -40,7 +40,7 @@ namespace MariaVaiComAsOutras
             // 
             // gpbRoteiros
             // 
-            this.gpbRoteiros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gpbRoteiros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
             this.gpbRoteiros.Controls.Add(this.btnHotel);
             this.gpbRoteiros.Controls.Add(this.btnPassagens);
             this.gpbRoteiros.Controls.Add(this.btnPacotes);
@@ -54,7 +54,7 @@ namespace MariaVaiComAsOutras
             // 
             // btnHotel
             // 
-            this.btnHotel.BackColor = System.Drawing.Color.Azure;
+            this.btnHotel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
             this.btnHotel.Image = ((System.Drawing.Image)(resources.GetObject("btnHotel.Image")));
             this.btnHotel.Location = new System.Drawing.Point(485, 44);
             this.btnHotel.Name = "btnHotel";
@@ -68,7 +68,7 @@ namespace MariaVaiComAsOutras
             // 
             // btnPassagens
             // 
-            this.btnPassagens.BackColor = System.Drawing.Color.Azure;
+            this.btnPassagens.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
             this.btnPassagens.Image = ((System.Drawing.Image)(resources.GetObject("btnPassagens.Image")));
             this.btnPassagens.Location = new System.Drawing.Point(252, 44);
             this.btnPassagens.Name = "btnPassagens";
@@ -82,7 +82,7 @@ namespace MariaVaiComAsOutras
             // 
             // btnPacotes
             // 
-            this.btnPacotes.BackColor = System.Drawing.Color.Azure;
+            this.btnPacotes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
             this.btnPacotes.Image = ((System.Drawing.Image)(resources.GetObject("btnPacotes.Image")));
             this.btnPacotes.Location = new System.Drawing.Point(22, 44);
             this.btnPacotes.Name = "btnPacotes";
@@ -96,11 +96,12 @@ namespace MariaVaiComAsOutras
             // 
             // btnVoltar
             // 
-            this.btnVoltar.BackColor = System.Drawing.Color.Azure;
-            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(635, 405);
+            this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(640, 405);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(100, 33);
+            this.btnVoltar.Size = new System.Drawing.Size(119, 33);
             this.btnVoltar.TabIndex = 4;
             this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = false;
@@ -109,10 +110,11 @@ namespace MariaVaiComAsOutras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.gpbRoteiros);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "frmRoteiros";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
