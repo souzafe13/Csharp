@@ -34,3 +34,4 @@ C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\Ma
 C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.csproj.CopyComplete
+C:\Users\fernanda.msouza41\Documents\Visual Studio 2019\ProjetoTI110_fernanda\MariaVaiComAsOutras\MariaVaiComAsOutras\obj\Debug\MariaVaiComAsOutras.Comissão.resources

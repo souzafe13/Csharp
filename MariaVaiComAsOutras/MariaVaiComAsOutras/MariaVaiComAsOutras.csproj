@@ -85,6 +85,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexao.cs" />
+    <Compile Include="frmcomissao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmcomissao.Designer.cs">
+      <DependentUpon>frmcomissao.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmHotel.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmcomissao.resx">
+      <DependentUpon>frmcomissao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmHotel.resx">
       <DependentUpon>frmHotel.cs</DependentUpon>
     </EmbeddedResource>

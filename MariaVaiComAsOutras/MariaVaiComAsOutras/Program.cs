@@ -16,7 +16,7 @@ namespace MariaVaiComAsOutras
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmPassagens());
+            Application.Run(new Comissão());
         }
     }
 }
