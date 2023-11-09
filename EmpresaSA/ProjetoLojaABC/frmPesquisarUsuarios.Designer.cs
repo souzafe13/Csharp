@@ -133,6 +133,7 @@ namespace ProjetoLojaABC
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.gpbPesquisar);
             this.Name = "frmPesquisarUsuarios";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmPesquisarUsuarios";
             this.gpbPesquisar.ResumeLayout(false);
             this.gpbPesquisar.PerformLayout();

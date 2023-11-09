@@ -12,7 +12,7 @@ using System.Runtime.InteropServices;
 
 namespace MariaVaiComAsOutras
 {
-    public partial class Comissão : Form
+    public partial class frmComissao : Form
     {
         //Criando variáveis para controle do menu
         const int MF_BYCOMMAND = 0X400;
@@ -23,7 +23,7 @@ namespace MariaVaiComAsOutras
         [DllImport("user32")]
         static extern int GetMenuItemCount(IntPtr hWnd);
         
-        public Comissão()
+        public frmComissao()
         {
             InitializeComponent();
         }
@@ -41,6 +41,8 @@ namespace MariaVaiComAsOutras
             txtValorDaPassagem.Clear();
             rdbPassInt20.Checked = false;
             rdbPassNac10.Checked = false;
+            rdbPacInt20.Checked = false;
+            rdbPacNac10.Checked = false;
             cbbVendedores.Text = "";
             txtValorDaComissao.Clear();
             txtValorFinalDaPassagem.Clear();
@@ -86,7 +88,7 @@ namespace MariaVaiComAsOutras
                 }
                 else
                 {
-                    MessageBox.Show("Por favor, selecione uma operação!",
+                    MessageBox.Show("Por favor, selecione uma modalidade!",
                             "Mensagem do sistema",
                             MessageBoxButtons.OK,
                             MessageBoxIcon.Error,
@@ -130,27 +132,21 @@ namespace MariaVaiComAsOutras
                         resultado = num1 *num5;
                     }
                     txtValorDaComissao.Text = resultado.ToString();
-
                 }
-                else
-                {
-                    MessageBox.Show("Por favor, selecione uma operação!",
-                            "Mensagem do sistema",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error,
-                            MessageBoxDefaultButton.Button1);
-                }
+             
 
             }
             catch (Exception)
             {
-                MessageBox.Show("Por favor, inserir somente números!",
-                            "Mensagem do sistema",
-                            MessageBoxButtons.OK,
-                            MessageBoxIcon.Error,
-                            MessageBoxDefaultButton.Button1);
-                limparCampos();
+                limparCampos();  
             }
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmPassagens abrir = new frmPassagens();
+            abrir.Show();
+            this.Hide();
         }
     }
 }

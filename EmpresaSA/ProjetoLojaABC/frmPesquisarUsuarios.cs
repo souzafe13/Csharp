@@ -183,16 +183,14 @@ namespace ProjetoLojaABC
                     MessageBoxButtons.OK, MessageBoxIcon.Error,
                     MessageBoxDefaultButton.Button1);
             }
-            else
-            {
-                string nome = ltbPesquisar.SelectedItem.ToString();
-                frmCadastroUsuario abrir = new frmCadastroUsuario(nome);
-                abrir.Show();
-                this.Hide();
-            }
+           // else
+           // {
+             //   string nome = ltbPesquisar.SelectedItem.ToString();
+              //  frmCadastroUsuario abrir = new frmCadastroUsuario(nome);
+              //  abrir.Show();
+              //  this.Hide();
+           // }
         }
-    }
-}
     }
 }
 

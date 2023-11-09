@@ -42,6 +42,7 @@ namespace MariaVaiComAsOutras
             this.lblData = new System.Windows.Forms.Label();
             this.dtpData = new System.Windows.Forms.DateTimePicker();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.btnComissao = new System.Windows.Forms.Button();
             this.gpbDestinos.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,7 +177,7 @@ namespace MariaVaiComAsOutras
             this.btnVoltar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVoltar.Location = new System.Drawing.Point(647, 410);
+            this.btnVoltar.Location = new System.Drawing.Point(35, 410);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(119, 39);
             this.btnVoltar.TabIndex = 9;
@@ -184,12 +185,26 @@ namespace MariaVaiComAsOutras
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // btnComissao
+            // 
+            this.btnComissao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(238)))), ((int)(((byte)(224)))));
+            this.btnComissao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnComissao.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComissao.Location = new System.Drawing.Point(587, 410);
+            this.btnComissao.Name = "btnComissao";
+            this.btnComissao.Size = new System.Drawing.Size(179, 39);
+            this.btnComissao.TabIndex = 10;
+            this.btnComissao.Text = "Calcular Comissão";
+            this.btnComissao.UseVisualStyleBackColor = false;
+            this.btnComissao.Click += new System.EventHandler(this.btnComissao_Click);
+            // 
             // frmPassagens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(193)))), ((int)(((byte)(205)))), ((int)(((byte)(193)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnComissao);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.gpbDestinos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -217,5 +232,6 @@ namespace MariaVaiComAsOutras
         private System.Windows.Forms.TextBox txtDescricao;
         private System.Windows.Forms.Label lblDescricao;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnComissao;
     }
 }

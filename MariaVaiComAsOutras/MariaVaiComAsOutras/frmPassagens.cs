@@ -173,5 +173,12 @@ namespace MariaVaiComAsOutras
                 MessageBox.Show("Por favor, digite um destino", "Mensagem do Sistema", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
         }
+
+        private void btnComissao_Click(object sender, EventArgs e)
+        {
+            frmComissao abrir = new frmComissao();
+            abrir.Show();
+            this.Hide();
+        }
     }
 }
